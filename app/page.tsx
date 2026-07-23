@@ -6,13 +6,6 @@ export const metadata: Metadata = {
     "郑惠跃的职业发展档案：AI 内容生产、新媒体运营、项目流程设计与独立站实践。",
 };
 
-const metrics = [
-  { value: "90", unit: "条", label: "宠物内容选题", note: "覆盖 9 类内容系列" },
-  { value: "101", unit: "条", label: "场景分配明细", note: "细化到账号、道具与优先级" },
-  { value: "10", unit: "个", label: "账号人设规划", note: "TikTok / Instagram 双平台" },
-  { value: "77", unit: "条", label: "评论承接素材", note: "沉淀互动与网站引导话术" },
-];
-
 const capabilities = [
   {
     index: "01",
@@ -134,46 +127,61 @@ export default function Home() {
             <h2>不是“会使用 AI”，<br />而是让 AI 进入工作流。</h2>
           </div>
           <p>
-            以下数据来自实际搭建的飞书多维表格与项目资料。它们代表已经完成的规划、素材与追踪记录，
-            不等同于未经验证的营收成绩。
+            这里不以条目数量代替工作结果，而是呈现我如何理解问题、组织执行、观察反馈，
+            以及哪些结论仍在等待真实业务验证。
           </p>
         </div>
 
-        <div className="metric-grid">
-          {metrics.map((metric) => (
-            <article className="metric-card" key={metric.label}>
-              <div><strong>{metric.value}</strong><span>{metric.unit}</span></div>
-              <h3>{metric.label}</h3>
-              <p>{metric.note}</p>
+        <div className="evidence-ledger" aria-label="工作证据与判断">
+          <div className="ledger-intro">
+            <p>WORKING EVIDENCE</p>
+            <h3>真正被沉淀下来的，<br />是解决问题的方法。</h3>
+            <span>证据来源：项目工作记录、飞书多维表格与实际页面产出</span>
+          </div>
+          <div className="ledger-records">
+            <article>
+              <span>从模糊到清晰</span>
+              <h3>把需求拆成可执行的工作结构</h3>
+              <p>将对标研究、账号定位、人设、叙事开头、提示词版本与任务状态组织进同一套项目资产。</p>
             </article>
-          ))}
+            <article>
+              <span>从灵感到生产</span>
+              <h3>让创意不再依赖临场发挥</h3>
+              <p>为画面、动作、镜头、台词与环境声建立约束，保留版本差异，减少每天从零开始的成本。</p>
+            </article>
+            <article>
+              <span>从现象到原因</span>
+              <h3>从结果异常倒推转化链路</h3>
+              <p>发现内容曝光没有自然进入网站后，把问题继续拆到主页入口、评论意图、平台限制与商品页承接。</p>
+            </article>
+          </div>
         </div>
 
         <article className="case-study">
           <div className="case-copy">
             <p className="case-number">CASE 01 · PET CONTENT SYSTEM</p>
-            <h3>从 10 个账号，到一套可执行的内容系统</h3>
+            <h3>从账号实验，到一条可复盘的内容运营链路</h3>
             <p>
-              围绕宠物搞笑赛道，完成账号定位、人设差异、内容系列、10 天排班、场景分配与发布打卡设计。
-              核心不是堆积创意，而是减少每天“从零开始”的成本。
+              围绕宠物内容项目，我把对标、定位、叙事、提示词、发布反馈与评论承接连接起来。
+              核心不是堆积素材，而是让每一轮工作都能为下一轮提供依据。
             </p>
             <ul className="check-list">
-              <li>基于 29 个对标账号提炼简介与内容结构</li>
-              <li>把 90 条选题分配到 10 个差异化账号</li>
-              <li>建立 101 条场景明细与 27 条发布追踪记录</li>
-              <li>沉淀图像、视频与评论承接提示词资产</li>
+              <li>从对标样本中提炼账号定位、叙事方式与内容结构</li>
+              <li>把角色、道具、镜头和台词约束沉淀为可复用提示词</li>
+              <li>根据评论意图区分购买引导、产品答疑与情绪回应</li>
+              <li>保留流量质量、商品页转化与履约闭环等未验证项</li>
             </ul>
           </div>
           <div className="system-map" aria-label="内容系统流程图">
             <div className="system-title">CONTENT OPERATING LOOP</div>
-            <div className="system-row"><span>01</span><strong>对标研究</strong><small>29 accounts</small></div>
+            <div className="system-row"><span>01</span><strong>对标与定位</strong><small>RESEARCH</small></div>
             <div className="connector" />
-            <div className="system-row"><span>02</span><strong>账号定位</strong><small>10 personas</small></div>
+            <div className="system-row"><span>02</span><strong>叙事与提示词</strong><small>PROTOTYPE</small></div>
             <div className="connector" />
-            <div className="system-row"><span>03</span><strong>选题与场景</strong><small>90 + 101 records</small></div>
+            <div className="system-row"><span>03</span><strong>发布与反馈</strong><small>OBSERVE</small></div>
             <div className="connector" />
-            <div className="system-row"><span>04</span><strong>发布与互动</strong><small>track & learn</small></div>
-            <div className="loop-note">反馈重新进入下一轮选题 ↗</div>
+            <div className="system-row"><span>04</span><strong>承接与复盘</strong><small>ITERATE</small></div>
+            <div className="loop-note">让反馈重新进入下一轮判断 ↗</div>
           </div>
         </article>
 

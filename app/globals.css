@@ -101,14 +101,24 @@ nav a:hover::after { right: 0; }
 .split-heading { display: grid; grid-template-columns: 1.15fr .85fr; align-items: end; gap: 100px; }
 .split-heading > p { margin: 0 0 5px; color: var(--muted); font-size: 15px; line-height: 1.9; }
 
-.metric-grid { margin-top: 62px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); background: var(--white); }
-.metric-card { min-height: 230px; padding: 30px; border-right: 1px solid var(--line); }
-.metric-card:last-child { border-right: 0; }
-.metric-card div { display: flex; align-items: baseline; gap: 5px; }
-.metric-card strong { color: var(--green); font-size: 58px; line-height: 1; letter-spacing: -.05em; }
-.metric-card div span { color: var(--muted); font-size: 12px; }
-.metric-card h3 { margin: 28px 0 6px; font-size: 15px; }
-.metric-card p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.evidence-ledger {
+  margin-top: 68px;
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  background: var(--white);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.ledger-intro { padding: 44px 52px 52px 0; border-right: 1px solid var(--line); }
+.ledger-intro > p { margin: 0 0 58px; color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: .18em; }
+.ledger-intro h3 { margin: 0; max-width: 380px; font-size: 30px; line-height: 1.35; letter-spacing: -.03em; }
+.ledger-intro span { display: block; max-width: 340px; margin-top: 54px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.ledger-records { padding-left: 52px; }
+.ledger-records article { display: grid; grid-template-columns: 120px 1fr 1.25fr; gap: 26px; align-items: baseline; padding: 34px 0; border-bottom: 1px solid var(--line); }
+.ledger-records article:last-child { border-bottom: 0; }
+.ledger-records span { color: var(--orange); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.ledger-records h3 { margin: 0; font-size: 17px; line-height: 1.5; }
+.ledger-records p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
 
 .case-study { margin-top: 78px; padding: 56px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 74px; background: #e5e9dd; }
 .case-number { margin: 0 0 18px; color: var(--green); font-size: 10px; font-weight: 800; letter-spacing: .18em; }
@@ -176,9 +186,12 @@ nav a:hover::after { right: 0; }
   .belief-strip { grid-template-columns: 1fr 1fr; }
   .belief-strip > * { min-height: 66px; border-bottom: 1px solid var(--line); }
   .split-heading { grid-template-columns: 1fr; gap: 24px; }
-  .metric-grid, .capability-grid { grid-template-columns: 1fr 1fr; }
-  .metric-card:nth-child(2), .capability-grid article:nth-child(2) { border-right: 0; }
-  .metric-card:nth-child(-n+2), .capability-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .evidence-ledger { grid-template-columns: 1fr; }
+  .ledger-intro { padding-right: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .ledger-records { padding-left: 0; }
+  .capability-grid { grid-template-columns: 1fr 1fr; }
+  .capability-grid article:nth-child(2) { border-right: 0; }
+  .capability-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .case-study, .commerce-case { grid-template-columns: 1fr; }
   .commerce-case { gap: 36px; }
   .timeline article > div:last-child { grid-template-columns: 130px 1fr; }
@@ -197,8 +210,12 @@ nav a:hover::after { right: 0; }
   .belief-strip { grid-template-columns: 1fr; }
   .belief-strip > * { border-right: 0; }
   .section { padding: 82px 0; }
-  .metric-grid, .capability-grid { grid-template-columns: 1fr; }
-  .metric-card, .metric-card:nth-child(2), .capability-grid article, .capability-grid article:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
+  .ledger-intro { padding: 34px 0; }
+  .ledger-intro > p { margin-bottom: 32px; }
+  .ledger-intro span { margin-top: 30px; }
+  .ledger-records article { grid-template-columns: 1fr; gap: 10px; padding: 28px 0; }
+  .capability-grid { grid-template-columns: 1fr; }
+  .capability-grid article, .capability-grid article:nth-child(2) { border-right: 0; border-bottom: 1px solid var(--line); }
   .case-study { padding: 28px; gap: 40px; }
   .case-copy h3, .commerce-copy h3 { font-size: 30px; }
   .site-crop { height: 420px; }
